@@ -6,9 +6,9 @@
         </div>
         <div class="flex flex-row gap-3 text-lg text-black max-w-full mt-3">
             @auth
-            <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="{{route('filament.user.pages.dashboard')}}">GET STARTED</a>
+            <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="{{route('dashboard')}}">GET STARTED</a>
             @else
-            <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="{{route('filament.user.auth.login')}}">GET STARTED</a>
+            <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="{{route('login')}}">GET STARTED</a>
             @endauth
             <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="">BROWSE BOOKS</a>
         </div>

@@ -5,7 +5,7 @@
     <div class="flex-none w-36 m-3 p-3 text-black">
         <a href="{{route("home")}}">PT FAN BOOKS</a>
     </div>
-    <div class="flex-none w-36 m-3 p-3 text-black">
+    <div class="flex-none w-36 m-3 p-3 text-black hidden lg:block">
         <a href="">COLLECTION</a>
     </div>
     <div class="flex-1 m-3 p-3">

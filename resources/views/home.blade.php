@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.anymous')
 
 <body class="antialiased text-white">
     <livewire:navigation />

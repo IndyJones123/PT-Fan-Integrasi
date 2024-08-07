@@ -14,14 +14,14 @@
                 {{-- PC --}}
                 <div class="hidden lg:block">
                     @auth
-                        <a href="{{ route('filament.user.pages.dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                        <a href="{{ route('dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
                             Dashboard
                         </a>
                     @else
-                        <a href="{{ route('filament.user.auth.login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-black dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
                             LOGIN
                         </a>
-                        <a href="{{ route('filament.user.auth.register') }}" class="ml-4 font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded">
+                        <a href="{{ route('register') }}" class="ml-4 font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded">
                             SIGN UP FOR FREE
                         </a>
                     @endauth

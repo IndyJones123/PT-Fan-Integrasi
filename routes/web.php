@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\BooksController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,13 @@ Route::middleware('auth','verified')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //Users Route
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+
+
+    //Books Route
+    Route::get('/Books', [BooksController::class, 'index'])->name('books.index');
 });
 
 require __DIR__.'/auth.php';

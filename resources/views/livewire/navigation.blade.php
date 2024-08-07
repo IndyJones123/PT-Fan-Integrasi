@@ -36,14 +36,14 @@
                     </button>
                     <div id="menuItems" class="absolute right-0 mt-2 hidden bg-white shadow-lg dark:bg-gray-800">
                         @auth
-                            <a href="{{ route('filament.user.pages.dashboard') }}" class="block px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                            <a href="{{ route('dashboard') }}" class="block px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
                                 Dashboard
                             </a>
                         @else
-                            <a href="{{ route('filament.user.auth.login') }}" class="block px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                            <a href="{{ route('login') }}" class="block px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
                                 LOGIN
                             </a>
-                            <a href="{{ route('filament.user.auth.register') }}" class="block px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                            <a href="{{ route('register') }}" class="block px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
                                 REGISTER
                             </a>
                         @endauth

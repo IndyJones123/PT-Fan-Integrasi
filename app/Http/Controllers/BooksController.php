@@ -61,7 +61,7 @@ class BooksController extends Controller
             'author_id' => 'required|integer|max:10',
             'description' => 'required|string|max:255',
             'rating' => 'required|integer',
-            'thumbnail' => ['required', 'file', 'mimes:jpg,png,jpeg', 'max:2048'],
+            'thumbnail' => 'required|file|mimes:jpg,png,jpeg|max:2028',
         ]);
 
         $thumbnailName = Str::random(10) . '.' . $request->file('thumbnail')->getClientOriginalExtension();

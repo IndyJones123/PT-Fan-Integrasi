@@ -26,9 +26,9 @@
             <div class="grid grid-cols-2 gap-3 m-5 lg:grid-cols-3">
                 @foreach($books as $data)
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg flex flex-col justify-between items-center">
-                    <div class="flex flex-col lg:flex-row m-5 p-2 gap-3">
-                        <div class="flex flex-col gap-5">
-                            <img class="w-15 h-15 lg:w-20 lg:h-20 rounded-lg" src="{{ asset($data->thumbnail) }}" alt="">
+                    <div class="flex flex-col lg:flex-row m-5 p-2 gap-3 justify-center lg:justify-start">
+                        <div class="flex flex-col gap-5 justify-center lg:justify-start">
+                            <img class="w-10 h-10 lg:w-20 lg:h-20 rounded-lg" src="{{ asset($data->thumbnail) }}" alt="">
                         </div>
                         <div class="flex flex-col gap-5 flex-1">
                             <p class="text-black dark:text-white text-xs truncate">Title: {{ $data->title }}</p>
@@ -56,23 +56,19 @@
                                         No rating
                                 @endswitch
                             </p>
-                            <div class="flex flex-col lg:flex-row gap-2 mt-2">
-                                <a href="{{ route('books.edit', $data->id) }}" class="text-xs font-semibold text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-4 py-2 rounded">📝 Edit</a>
-                                <form action="{{ route('books.destroy', $data->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this book?');">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="text-xs font-semibold text-white bg-red-500 hover:bg-red-600 dark:bg-red-700 dark:hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 px-4 py-2 rounded">🗑️ Delete</button>
-                                </form>
+                            <div class="flex flex-col lg:flex-row gap-2 mt-2 justify-center lg:justify-start">
+                                <a href="{{ route('collection.likes', $data->id) }}" class="text-xs font-semibold text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-4 py-2 rounded">📝 Edit</a>
+                                <a href="{{ route('collection.dislikes', $data->id) }}" class="text-xs font-semibold text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-4 py-2 rounded">📝 Edit</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-            <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
+            <div class="px-6 py-4 mb-8 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
                 <div>
                     <p class="text-sm text-gray-600">
-                        <span class="font-semibold text-black dark:text-white">{{ $books->total() }}</span> results
+                        <span class="font-semibold text-black dark:text-black">{{ $books->total() }}</span> results
                     </p>
                 </div>
                 <div>

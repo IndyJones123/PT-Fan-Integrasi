@@ -25,17 +25,17 @@ class Books extends Model
         return $this->belongsTo(User::class, 'author_id');
     }
 
-    public function likes()
+    public function like()
     {
-        return $this->hasMany(Like::class);
+        return $this->hasMany(Like::class, 'id');
     }
 
-    public function dislikes()
+    public function dislike()
     {
-        return $this->hasMany(Dislike::class);
+        return $this->hasMany(Dislike::class, 'id');
     }
 
-    public function comments()
+    public function comment()
     {
         return $this->hasMany(Comment::class);
     }

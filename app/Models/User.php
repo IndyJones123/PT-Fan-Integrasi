@@ -47,17 +47,17 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Books::class, 'author_id');
     }
 
-     public function likes()
+     public function like()
     {
         return $this->hasMany(Like::class);
     }
 
-    public function dislikes()
+    public function dislike()
     {
         return $this->hasMany(Dislike::class);
     }
 
-    public function comments()
+    public function comment()
     {
         return $this->hasMany(Comment::class);
     }

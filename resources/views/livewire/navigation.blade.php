@@ -6,7 +6,7 @@
         <a href="{{route("home")}}">PT FAN BOOKS</a>
     </div>
     <div class="flex-none w-36 m-3 p-3 text-black hidden lg:block">
-        <a href="">COLLECTION</a>
+        <a href="{{route("collection.index")}}">COLLECTION</a>
     </div>
     <div class="flex-1 m-3 p-3">
         <div class="flex justify-end items-end text-right">

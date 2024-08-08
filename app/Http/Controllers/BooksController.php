@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 
 class BooksController extends Controller
 {
@@ -16,7 +17,7 @@ class BooksController extends Controller
     {
         $search = $request->input('search');
 
-        $query = Books::query(); // Use query builder
+        $query = Books::query()->where('author_id', Auth::id()); // Use query builder
 
         if ($search) {
             $search = strtolower($search); // Convert search term to lowercase

@@ -23,8 +23,8 @@ class BooksController extends Controller
             $search = strtolower($search); // Convert search term to lowercase
 
             $query->where(function ($q) use ($search) {
-                $q->whereRaw('LOWER(name) LIKE ?', ["%{$search}%"])
-                    ->orWhereRaw('LOWER(email) LIKE ?', ["%{$search}%"]);
+                $q->
+                    orWhereRaw('LOWER(title) LIKE ?', ["%{$search}%"]);
             });
         }
 

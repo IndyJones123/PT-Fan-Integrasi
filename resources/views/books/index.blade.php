@@ -56,9 +56,13 @@
                                         No rating
                                 @endswitch
                             </p>
-                            <div class="flex flex-col lg:flex-row gap-2 mt-2 justify-center lg:justify-start">
-                                <a href="{{ route('collection.likes', $data->id) }}" class="text-xs font-semibold text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-4 py-2 rounded">📝 Edit</a>
-                                <a href="{{ route('collection.dislikes', $data->id) }}" class="text-xs font-semibold text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-4 py-2 rounded">📝 Edit</a>
+                            <div class="flex flex-col lg:flex-row gap-2 mt-2">
+                                <a href="{{ route('books.edit', $data->id) }}" class="text-xs font-semibold text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-4 py-2 rounded">📝 Edit</a>
+                                <form action="{{ route('books.destroy', $data->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this book?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-xs font-semibold text-white bg-red-500 hover:bg-red-600 dark:bg-red-700 dark:hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 px-4 py-2 rounded">🗑️ Delete</button>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
     <hr class="border-t mb-3 border-gray-300">
     <div class="bg-white-200">
         <div class="flex flex-col lg:flex-row gap-1 lg:gap-5 p-5">
-            <div class="flex-1 lg:w-1/2 bg-gray-300 px-5 py-5 rounded-lg">
+            <div class="flex-1 lg:flex-none lg:w-1/6 bg-gray-300 px-5 py-5 rounded-lg">
                 <div class="flex flex-row gap-1">
                 <!-- Search Form -->
                 <form action="{{ route('collection.index') }}" method="GET" class="flex-1 w-3/4 mb-4">
@@ -38,7 +38,7 @@
                     <input type="date" id="date_uploaded" name="date_uploaded" value="{{ request()->input('date_uploaded') }}" class="border rounded-lg py-2 px-4 w-full max-w-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black" onchange="filterResults()">
                 </div>
 
-                </div>
+            </div>
             <div class="flex-1 lg:w-1/2 bg-gray-300 rounded-lg">
                 <div class="grid grid-cols-2 gap-3 m-5 lg:grid-cols-3">
                     @foreach($books as $data)

@@ -10,7 +10,7 @@
             @else
             <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="{{route('login')}}">GET STARTED</a>
             @endauth
-            <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="">BROWSE BOOKS</a>
+            <a class="font-semibold text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 px-4 py-2 rounded" href="{{route('collection.index')}}">BROWSE BOOKS</a>
         </div>
     </div>
     <div class="lg:flex-none lg:w-1/2 flex items-center justify-center max-w-full p-3">

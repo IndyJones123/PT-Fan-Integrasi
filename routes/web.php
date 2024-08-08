@@ -34,7 +34,7 @@ Route::middleware('auth','verified')->group(function () {
 
 
     //Books Route
-    Route::get('/Books', [BooksController::class, 'index'])->name('books.index');
+    Route::resource('books', BooksController::class);
 });
 
 require __DIR__.'/auth.php';

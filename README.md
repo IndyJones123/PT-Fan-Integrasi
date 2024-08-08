@@ -28,6 +28,12 @@ Download .env that i have sent in email. and change the database local into your
 
 Dont Forget To Paste in Project Root
 
+if u want to use it in your local try this command to migrate the database using ORM that i already Built
+
+```bash
+  php artisan migrate
+```
+
 ## Running Website Locally
 
 To run the program, run the following command
